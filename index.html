@@ -23,7 +23,9 @@
       <a href="./index.html" class="logotop"><span class="logotopblue">Web</span>Studio</a>
       <nav>
         <ul class="navigation">
-          <li class="navigation-item "><a href="./index.html" class="navigation-link current-page">Студія</a></li>
+          <li class="navigation-item">
+            <a href="./index.html" class="navigation-link current-page">Студія</a>
+          </li>
           <li class="navigation-item">
             <a href="./portfolio.html" class="navigation-link">Портфоліо</a>
           </li>
@@ -536,6 +538,26 @@
               </li>
             </ul>
           </div>
+          <div class="mailing">
+            <h3 class="mailing__header">Підпишіться на розсилку</h3>
+            <form name="mailing_requiered" autocomplete="on" class="mailing__form">
+              <label for="mailing">
+                <input
+                  type="email"
+                  name="mailing__input"
+                  class="mailing__input"
+                  placeholder="E-mail"
+                  id="mailing__form"
+                />
+              </label>
+              <button type="submit" class="mailing__button">
+                Підписатися
+                <svg class="mailing_icon" width="24" height="24">
+                  <use href="./images/icons_sprite.svg#icon-send-mailing"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -547,6 +569,56 @@
             <use href="./images/icons_sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal__header">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal_form" name="modal_form">
+          <div class="modal__form-group" role="group">
+            <label class="modal-form-label" for="name">Ім'я</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-field" type="text" name="name" id="name" required />
+              <svg class="icon__form" width="18" height="18">
+                <use href="./images/icons_sprite.svg#icon-person-black"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="tel">Телефон</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-field" type="tel" name="tel" id="tel" required />
+              <svg class="icon__form" width="18" height="18">
+                <use href="./images/icons_sprite.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="email">Пошта</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-field" type="email" name="email" id="email" required />
+              <svg class="icon__form" width="18" height="18">
+                <use href="./images/icons_sprite.svg#icon-email-black"></use>
+              </svg>
+            </div>
+            <label class="modal-form-label" for="user-message">Коментар</label>
+            <textarea
+              class="modal-form-message"
+              name="user-message"
+              id="user-message"
+              rows="5"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <div class="agreement" role="group">
+            <input
+              class="modal-form-checkbox visually-hidden"
+              type="checkbox"
+              id="user-agreement"
+              required
+            />
+            <label class="modal-form-agreement-text" for="user-agreement">
+              <svg class="agreement__icon" width="16" height="15">
+                <use class="check" href="./images/icons_sprite.svg#icon-check"></use>
+                <use class="uncheck" href="./images/icons_sprite.svg#icon-uncheck"></use>
+              </svg>
+              Погоджуюся з розсилкою та приймаю<a class="agreement__link" href="">Умови договору</a>
+            </label>
+          </div>
+          <button class="modal-form-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <!--scripts-->
